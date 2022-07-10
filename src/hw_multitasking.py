@@ -38,7 +38,7 @@ async def run_horse(name: str, coef: int) -> None:
 async def main():
     horses = [(horse_name(), randint(0, 4)) for horse in range(HORSES_COUNT)]
     print("Competitors:")
-    [print(horse[0]) for horse in horses]
+    [print(f"{idx + 1}. {horse[0]}") for idx, horse in enumerate(horses)]
     print("\nRace started!")
 
     for race in range(RACE_COUNT):
